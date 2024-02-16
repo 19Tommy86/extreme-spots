@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XtremeSpots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=DIN_API_NØKKEL"></script>
+    <script>
+        function initMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(59.911491, 10.757933),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+    </script>
+</head>
+<body onload="initMap();">
+    <header>
+        <h1>XtremeSpots</h1>
+    </header>
+    <div id="map"></div>
+    <!-- Ytterligere brukergrensesnittkomponenter vil komme her -->
+</body>
+</html>
